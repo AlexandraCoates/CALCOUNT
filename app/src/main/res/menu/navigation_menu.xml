@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/nav_add_edit_records"
+        android:title="Add/Edit Records" />
+
+    <item
+        android:id="@+id/nav_weekly"
+        android:title="Weekly Records" />
+
+    <item
+        android:id="@+id/nav_monthly"
+        android:title="Monthly Records" />
+
+    <item
+        android:id="@+id/nav_trends"
+        android:title="Your Trends"/>
+
+    <item
+        android:id="@+id/nav_edit_details"
+        android:title="Edit Your Details"/>
+</menu>
