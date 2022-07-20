@@ -3,7 +3,30 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/activity_main.xml" value="0.17395833333333333" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.196" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/drawable/ic_launcher_background.xml" value="0.196" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/activity_add_data.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/activity_add_edit.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/activity_edit_data.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/activity_edit_details.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/activity_monthly.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/activity_trends.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/activity_weekly.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_add__edit__records.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_add__record__data.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_add_data.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_add_edit.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_edit__details.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_edit__record__data.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_edit_data.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_edit_details.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_monthly.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_monthly__records.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_trends.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_weekly.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_weekly__records.xml" value="0.27708333333333335" />
+        <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/layout/fragment_your_trends.xml" value="0.27708333333333335" />
         <entry key="..\:/Users/alexa/Desktop/CALCOUNT3/app/src/main/res/menu/navigation_menu.xml" value="0.18802083333333333" />
       </map>
     </option>

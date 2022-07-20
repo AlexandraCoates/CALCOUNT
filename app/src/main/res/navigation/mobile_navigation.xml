@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/mainActivity">
+
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.example.calcount3.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/yourTrends"
+        android:name="com.example.calcount3.YourTrends"
+        android:label="fragment_your_trends"
+        tools:layout="@layout/fragment_your_trends" />
+    <fragment
+        android:id="@+id/add_Edit_Records"
+        android:name="com.example.calcount3.Add_Edit_Records"
+        android:label="fragment_add__edit__records"
+        tools:layout="@layout/fragment_add__edit__records" />
+    <fragment
+        android:id="@+id/add_Record_Data"
+        android:name="com.example.calcount3.Add_Record_Data"
+        android:label="fragment_add__record__data"
+        tools:layout="@layout/fragment_add__record__data" />
+    <fragment
+        android:id="@+id/edit_Record_Data"
+        android:name="com.example.calcount3.Edit_Record_Data"
+        android:label="fragment_edit__record__data"
+        tools:layout="@layout/fragment_edit__record__data" />
+    <fragment
+        android:id="@+id/edit_Details"
+        android:name="com.example.calcount3.Edit_Details"
+        android:label="fragment_edit__details"
+        tools:layout="@layout/fragment_edit__details" />
+    <fragment
+        android:id="@+id/weekly_Records"
+        android:name="com.example.calcount3.Weekly_Records"
+        android:label="fragment_weekly__records"
+        tools:layout="@layout/fragment_weekly__records" />
+    <fragment
+        android:id="@+id/monthly_Records"
+        android:name="com.example.calcount3.Monthly_Records"
+        android:label="fragment_monthly__records"
+        tools:layout="@layout/fragment_monthly__records" />
+</navigation>
