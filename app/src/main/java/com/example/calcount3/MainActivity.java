@@ -75,10 +75,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.nav_weekly:
                 fragmentClass = Weekly_Records.class;
                 break;
-            case R.id.edit_Details:
+            case R.id.nav_edit_details:
                 fragmentClass = Edit_Details.class;
                 break;
-            case R.id.yourTrends:
+            case R.id.nav_trends:
                 fragmentClass = YourTrends.class;
                 break;
             default:
