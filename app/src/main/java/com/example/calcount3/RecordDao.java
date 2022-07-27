@@ -21,6 +21,8 @@ public interface RecordDao {
 @Delete
     public void deleteRecord(Record record);
 
-@Query("SELECT * FROM records")
-    List<Record> getAll();
+@Query("SELECT * FROM records ORDER BY date DESC")
+    List<Record> recordDescDate();
+
+
 }
