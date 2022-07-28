@@ -5,10 +5,12 @@ import android.content.Context;
 import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
+import androidx.room.TypeConverters;
 
 
 //Creation of the App Database and assigning it its DAO.
-@Database(entities = {Record.class}, version = 1)
+@Database(entities = {Record.class}, version = 1, exportSchema = false)
+@TypeConverters({Converters.class})
 public abstract class App_Database extends RoomDatabase {
     public abstract RecordDao recordDao();
 

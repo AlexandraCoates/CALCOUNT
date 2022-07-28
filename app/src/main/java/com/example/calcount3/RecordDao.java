@@ -11,17 +11,18 @@ import java.util.List;
 
 @Dao
 public interface RecordDao {
-
 @Insert(onConflict = OnConflictStrategy.REPLACE)
     public void insertRecord (Record record);
+
 
 @Update
     public void updateRecord(Record record);
 
 @Delete
+
     public void deleteRecord(Record record);
 
-@Query("SELECT * FROM records ORDER BY date DESC")
+@Query("SELECT * FROM record ORDER BY date DESC")
     List<Record> recordDescDate();
 
 
