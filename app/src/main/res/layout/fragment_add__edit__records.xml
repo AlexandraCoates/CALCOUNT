@@ -73,8 +73,8 @@
 
         <ScrollView
             android:id="@+id/scrollView2"
-            android:layout_width="409dp"
-            android:layout_height="323dp"
+            android:layout_width="372dp"
+            android:layout_height="316dp"
             android:layout_marginStart="1dp"
             android:layout_marginEnd="1dp"
             app:layout_constraintBottom_toTopOf="@+id/button3"
@@ -82,9 +82,17 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+
+            </LinearLayout>
         </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,18 +1,28 @@
 package com.example.calcount3;
 
-import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
 
-import android.text.Layout;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.CheckBox;
+import android.widget.LinearLayout;
+import android.widget.ListAdapter;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.ScrollView;
+import android.widget.TextView;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -23,6 +33,9 @@ public class Add_Edit_Records extends Fragment {
 
     Button btnAdd;
     Button btnEdit;
+    LinearLayout list;
+    ArrayList<RadioButton> radioButtons = new ArrayList<RadioButton>();
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -43,10 +56,43 @@ public class Add_Edit_Records extends Fragment {
         btnEdit = (Button) view.findViewById(R.id.button3);
         btnAdd.setOnClickListener(handler);
         btnEdit.setOnClickListener(handler);
+        list = (LinearLayout) view.findViewById(R.id.linearLayout);
+        List<Record> recordList = App_Database.getDatabase(getActivity()).recordDao().recordDescDate();
+        for(Record record : recordList)
+        {
+            TextView textView = new TextView(getActivity());
+            SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+
+            textView.setText(sdf.format(record.date) + " " + record.foodItem);
+            RadioButton radioButton = new RadioButton(getActivity());
+            radioButton.setId(record.rid);
+            radioButtons.add(radioButton);
+            radioButton.setOnClickListener(radioHandler);
+            list.addView(textView);
+            list.addView(radioButton);
+        }
+
 
         return view;
     }
 
+    View.OnClickListener radioHandler = new View.OnClickListener() {
+        @Override
+        public void onClick(View view)
+        {
+            for (RadioButton button : radioButtons)
+            {
+                if(button.getId() != view.getId())
+                {
+                    button.setChecked(false);
+                } else if (button.getId() == view.getId())
+                {
+
+                    button.setChecked(true);
+                }
+            }
+        }
+    };
 
     View.OnClickListener handler = new View.OnClickListener() {
         @Override
@@ -55,8 +101,17 @@ public class Add_Edit_Records extends Fragment {
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction().replace(R.id.frameLayout, Add_Record_Data.newInstance("", "")).commit();
             } else if (view == btnEdit) {
-                FragmentManager fragmentManager = getFragmentManager();
-                fragmentManager.beginTransaction().replace(R.id.frameLayout, Edit_Record_Data.newInstance("", "")).commit();
+                int id = 1;
+                for(RadioButton button : radioButtons)
+                {
+                    if(button.isChecked())
+                    {
+                        id = button.getId();
+
+                        FragmentManager fragmentManager = getFragmentManager();
+                        fragmentManager.beginTransaction().replace(R.id.frameLayout, Edit_Record_Data.newInstance(id)).commit();
+                    }
+                }
             }
 
         }
@@ -82,7 +137,7 @@ public class Add_Edit_Records extends Fragment {
          * @return A new instance of fragment Add_Edit_Records.
          */
         // TODO: Rename and change types and number of parameters
-        public Add_Edit_Records newInstance(String param1, String param2) {
+        public static Add_Edit_Records newInstance(String param1, String param2) {
             Add_Edit_Records fragment = new Add_Edit_Records();
             Bundle args = new Bundle();
             args.putString(ARG_PARAM1, param1);

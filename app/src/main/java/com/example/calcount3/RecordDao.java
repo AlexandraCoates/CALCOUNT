@@ -25,5 +25,8 @@ public interface RecordDao {
 @Query("SELECT * FROM record ORDER BY date DESC")
     List<Record> recordDescDate();
 
+@Query("SELECT * FROM record WHERE rid=:id")
+    Record loadSingle(int id);
+
 
 }
