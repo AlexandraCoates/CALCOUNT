@@ -63,7 +63,7 @@ public class MainActivity extends AppCompatActivity {
     public void selectDrawerItem(MenuItem item)
     {
         Fragment fragment = null;
-        Class fragmentClass;
+        Class fragmentClass = null;
         switch(item.getItemId())
         {
             case R.id.nav_add_edit_records:
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
                 fragmentClass = YourTrends.class;
                 break;
             default:
-                fragmentClass = Add_Edit_Records.class;
+
                 break;
         }
 
